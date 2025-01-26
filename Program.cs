@@ -20,5 +20,13 @@
 
         await task;
         Console.WriteLine("Tarea completada.");
+ /*
+La ultima línea se muestra antes de que la tarea se complete. 
+  Esto ocurre porque el método Task.Factory.StartNew inicia la tarea de manera asíncrona, pero 
+  el programa no espera que la tarea finalice antes de continuar con el resto del código.
+  Para resolverlo podemos usar await para hacer una estructura totalmente asincronica indicándole 
+  al programa que debe esperar a que la tarea se complete para mostrar la ultima línea 
+  */
+  //LINK GITHUB:https://github.com/Dakootruco/Program-paralela/blob/main/Program.cs
     }
 }
